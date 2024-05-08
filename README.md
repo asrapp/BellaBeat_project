@@ -19,3 +19,12 @@ Secondary Stakeholders:
 Data Generation and Collection:
 The data for this analysis originates from [Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit). For detailed dataset documentation, please refer to [this link](https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf).
 
+# Data Integrity and Bias
+Our dataset includes 18 CSV files with data from 30 FitBit users who agreed to share their personal tracker data via Amazon Mechanical Turk. While the dataset is reliable, original, and comprehensive, it presents several concerns:
+
+- Sample Size and Collection Bias: The dataset is relatively small, and data collection is unevenly distributed across specific days of the week.
+- Recency of Data: The data is eight years old, having been collected in 2016. This may affect its relevance to current trends and technologies.
+- Lack of Critical Demographic Information: The dataset does not include demographic information such as gender. This omission is significant because Bellabeat’s products are specifically designed for women, making gender-specific insights crucial to our analysis and subsequent marketing strategies
+
+
+
