@@ -11,5 +11,6 @@ The objective is to analyze data from the FitBit Fitness Tracker App to uncover 
 Primary Stakeholders:
 - Urška Sršen: Co-founder and Chief Creative Officer of Bellabeat.
 - Sando Mur: Co-founder of Bellabeat and a key mathematician on the executive team.
+  
 Secondary Stakeholders:
 - Bellabeat Marketing Analytics Team: This team comprises data analysts dedicated to collecting, analyzing, and reporting data to refine Bellabeat’s marketing approaches
