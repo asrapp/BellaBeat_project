@@ -17,5 +17,5 @@ Secondary Stakeholders:
 
 # Data Preparation
 Data Generation and Collection:
-The data for this analysis originates from [Kaggle]([URL](https://www.kaggle.com/datasets/arashnic/fitbit)). For detailed dataset documentation, please refer to [this link](https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf).
+The data for this analysis originates from [Kaggle]([URL](https://www.kaggle.com/datasets/arashnic/fitbit). For detailed dataset documentation, please refer to [this link](https://www.fitabase.com/media/1930/fitabasedatadictionary102320.pdf).
 
