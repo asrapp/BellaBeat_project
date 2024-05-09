@@ -468,15 +468,19 @@ Following visualization is made using Tableau Desktop to illustrate correlations
 # Recommendations
 - Update the Dataset: The current dataset is eight years old. To enhance relevance and accuracy, Bellabeat should consider updating the dataset with more participants and diverse demographic data, including gender, age, location, and physiological metrics like height and weight. This will enable a broader and more inclusive analysis.
 - Integrate Comprehensive Health Metrics: The addition of heart rate and weight logs could significantly enrich the dataset. Expanding the integration of these metrics within Bellabeat’s products can help users track their health more comprehensively. Enhancing the app to sync seamlessly with devices that monitor these metrics will provide users with a holistic view of their health.
+  
 - Leverage Insights for Marketing and Product Enhancement:
 - Caloric Burn Prediction: Utilize the positive correlation between calories burned and factors like steps, distance, METs, and very active minutes to develop --predictive analytics features. This tool could forecast caloric burn based on user activity patterns, encouraging users to stay active.
 - Targeted Notifications: Implement notifications timed around peak activity periods, particularly from 5-7 PM, to encourage users to engage in moderate to intense physical activities. This aligns with the data showing when users are most active.
+  
 - Optimize Sleep Health Features:
 - Sleep Optimization Notifications: Since the data suggests an average 40-minute period to fall asleep, integrating sleep optimization tips and reminders could help users enhance sleep quality.
 - Custom Sleep Goals: Allow users to set and adjust sleep duration goals based on personal data and trends observed in the app.
+  
 - Sedentary Lifestyle Interventions:
 - Activity Reminders: For users frequently in a sedentary state, automatic reminders to engage in light or moderate physical activity after prolonged periods of inactivity could be beneficial.
 - Activity-Based Notifications: Since peak activity times are in the late afternoon and early evening, timed reminders or motivational messages could help maintain or increase user activity levels during these times.
-_ Incentivize Fitness Goals:
+  
+- Incentivize Fitness Goals:
 - Rewards System: Develop a rewards system that acknowledges user milestones with virtual badges or points that can be shared on social media. This could enhance user engagement and motivation.
 - Social Challenges: Implement features that allow users to participate in fitness challenges with friends or the Bellabeat community, fostering a supportive and competitive environment.
