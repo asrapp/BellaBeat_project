@@ -358,7 +358,77 @@ FROM
 ```
 #  Insights based on the Analyze Phase :
 
-According to [NBC](https://www.nbcnews.com/health/health-news/how-many-steps-day-should-you-take-study-finds-7-n1278853) , the fitness target of 10,000 steps per day is often encouraged, but a new study reveals that even 7,000 steps per day may contribute significantly to better health. the data shows moderate physical activity among most participants, with an average of 7,637.91 steps per day, which based on suggesting an active lifestyle on average for the sample data. However, the majority of the day (about 81.33%) is spent sedentarily, indicating a potential area for health improvement by increasing more vigorous activity levels.
+According to [NBC](https://www.nbcnews.com/health/health-news/how-many-steps-day-should-you-take-study-finds-7-n1278853) , the fitness target of 10,000 steps per day is often encouraged, but a new study reveals that even 7,000 steps per day may contribute significantly to better health. The data shows moderate physical activity among most participants in our data set, with an average of 7,637.91 steps per day, which is suggesting an active lifestyle on average for the data. However, the majority of the day (about 81.33%) is spent sedentarily, indicating a potential area for health improvement by increasing more vigorous activity levels.
 
 Participants get an average of 419.17 minutes of sleep per night, which is well within the recommended range based on [Sleep Foundation](https://www.sleepfoundation.org/women-sleep/do-women-need-more-sleep-than-men). However, the 39 minutes spent awake in bed may indicate some sleep inefficiencies, which could have an impact on overall sleep quality. Research suggests that women may require more sleep than males due to greater multitasking and brain usage, making sleep quality even more important. 
+
+
+The second job of our Analyze Phase is to identify patterns and determine how strong a relationship exists between two variables. The findings returned values ranging from -1 to 1:
+
+```sql
+-- Correctly chain the CTEs
+WITH CorrectedSleepDay AS (
+  SELECT
+    Id,
+    PARSE_DATE('%Y%m %d', REGEXP_REPLACE(SleepDay, r'(\d{6})\s+(\d{2})', r'\1 \2')) AS SleepDay,
+    TotalSleepRecords,
+    TotalMinutesAsleep,
+    TotalTimeInBed
+  FROM 
+    `bellabeat-422720.bella.NEwSleepDay_merged 2`
+),
+DailyActivity AS (
+  SELECT 
+    DA.Id,
+    DA.ActivityDate, 
+    SUM(DA.TotalSteps) AS Total_Steps, 
+    SUM(DA.TotalDistance) AS Total_Distance, 
+    SUM(DA.TrackerDistance) AS Total_Tracker_Distance, 
+    SUM(DA.LoggedActivitiesDistance) AS Total_LoggedActivitiesDistance,
+    SUM(DA.VeryActiveDistance) AS Total_VeryActiveDistance,
+    SUM(DA.ModeratelyActiveDistance) AS Total_ModeratelyActiveDistance,
+    SUM(DA.LightActiveDistance) AS Total_LightActiveDistance,
+    SUM(DA.SedentaryActiveDistance) AS Total_SedentaryActiveDistance,
+    SUM(DA.VeryActiveMinutes) AS Total_VeryActiveMinutes,
+    SUM(DA.FairlyActiveMinutes) AS Total_FairlyActiveMinutes,
+    SUM(DA.LightlyActiveMinutes) AS Total_LightlyActiveMinutes,
+    SUM(DA.SedentaryMinutes) AS Total_SedentaryMinutes,
+    SUM(DA.Calories) AS Total_Calories,
+    IFNULL(SUM(SD.TotalSleepRecords), 0) AS Total_SleepRecords,
+    IFNULL(SUM(SD.TotalMinutesAsleep), 0) AS Total_MinutesAsleep,
+    IFNULL(SUM(SD.TotalTimeInBed), 0) AS Total_TimeInBed
+  FROM 
+    `bellabeat-422720.bella.NEWdailyActivity_merged` AS DA
+  LEFT JOIN 
+    CorrectedSleepDay AS SD
+  ON DA.Id = SD.Id AND DA.ActivityDate = SD.SleepDay
+  GROUP BY DA.Id, DA.ActivityDate
+)
+SELECT 
+  AVG(Total_Steps) AS AvgSteps,
+  AVG(Total_Distance) AS AvgDistance,
+  AVG(Total_VeryActiveMinutes) AS AvgVeryActiveMins,
+  100 * SUM(Total_VeryActiveMinutes) / NULLIF(SUM(Total_VeryActiveMinutes + Total_FairlyActiveMinutes + Total_LightlyActiveMinutes + Total_SedentaryMinutes), 0) AS VeryActivePerc,
+  AVG(Total_FairlyActiveMinutes) AS AvgFairlyActiveMins,
+  100 * SUM(Total_FairlyActiveMinutes) / NULLIF(SUM(Total_VeryActiveMinutes + Total_FairlyActiveMinutes + Total_LightlyActiveMinutes + Total_SedentaryMinutes), 0) AS FairlyPerc,
+  AVG(Total_LightlyActiveMinutes) AS AvgLightlyActiveMins,
+  100 * SUM(Total_LightlyActiveMinutes) / NULLIF(SUM(Total_VeryActiveMinutes + Total_FairlyActiveMinutes + Total_LightlyActiveMinutes + Total_SedentaryMinutes), 0) AS LightlyActivePerc,
+  AVG(Total_SedentaryMinutes) AS AvgSedentaryMins,
+  100 * SUM(Total_SedentaryMinutes) / NULLIF(SUM(Total_VeryActiveMinutes + Total_FairlyActiveMinutes + Total_LightlyActiveMinutes + Total_SedentaryMinutes), 0) AS SedentaryPerc,
+  AVG(Total_Calories) AS AvgCalories,
+  SUM(Total_MinutesAsleep) / SUM(CASE WHEN Total_MinutesAsleep > 0 THEN 1 ELSE NULL END) AS AvgMinsAsleep,
+  SUM(Total_TimeInBed) / SUM(CASE WHEN Total_TimeInBed > 0 THEN 1 ELSE NULL END) AS AvgBedTime
+FROM 
+  DailyActivity;
+```
+
+Insights based on Correlation Analyses :
+At 0.71, there is a high positive correlation between calories and distance.
+At 0.64, there is a moderately high positive correlation between calories and distance.
+At 0.62, there is a moderately high positive correlation between calories and very active minutes.
+At 0.59, there is a moderately high positive correlation between calories and steps.
+At 0.30, there is a low positive correlation between calories and fairly active minutes.
+At 0.29, there is a negligible positive correlation between calories and lightly active minutes.
+At -0.11, there is a negligible negative correlation between calories and lightly active minutes.
+
 
