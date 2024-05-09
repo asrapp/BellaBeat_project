@@ -446,7 +446,8 @@ Following visualization is made using Tableau Desktop to illustrate correlations
 - Calories vs. Very Active Minutes: This graph demonstrates that increased time spent in vigorous physical activity correlates with a higher number of calories burned, reinforcing the value of intense exercise for caloric expenditure
 
 
-![177237874-04df95e2-d879-42c5-a75c-20efe87985aa](https://github.com/asrapp/BellaBeat_project/assets/96214105/276b2b34-f573-4a77-8120-b4a4f70b65b2)
+![177237694-31a79c77-9f9c-4d02-ae73-e56b216d77f4](https://github.com/asrapp/BellaBeat_project/assets/96214105/a01d6e7a-ec63-4b2d-bed1-39d1b33a9723)
+
 
 
 
@@ -455,7 +456,8 @@ Following visualization is made using Tableau Desktop to illustrate correlations
 -Average Steps by Hour : Users walk the most by 5PM-7PM.
 
 
-![177237694-31a79c77-9f9c-4d02-ae73-e56b216d77f4](https://github.com/asrapp/BellaBeat_project/assets/96214105/a01d6e7a-ec63-4b2d-bed1-39d1b33a9723)
+![177237874-04df95e2-d879-42c5-a75c-20efe87985aa](https://github.com/asrapp/BellaBeat_project/assets/96214105/276b2b34-f573-4a77-8120-b4a4f70b65b2)
+
 
 
 - Calories Burned: Users burn the most calories on Tuesdays and the fewest on Thursdays.
