@@ -432,3 +432,12 @@ At 0.29, there is a negligible positive correlation between calories and lightly
 At -0.11, there is a negligible negative correlation between calories and lightly active minutes.
 
 
+Following visualization is made using Tableau Desktop to illustrate correlations:
+
+![177237376-3abd0cf2-0a48-41c6-b7ac-b66a361d4b00](https://github.com/asrapp/BellaBeat_project/assets/96214105/c23f96e9-a082-44b9-915a-f83363935f8e)
+
+- Calories vs. Distance: This chart shows a clear positive correlation between calories burned and distance traveled. The trend suggests that as distance increases, so does calorie expenditure.
+- Calories vs. Steps: The plot displays a similar positive trend between the number of steps taken and calories burned, indicating that more steps typically lead to higher caloric burn.
+- Calories vs. METs: The relationship between METs and calories is strongly positive, highlighting that higher MET values, which indicate more intense activities, are associated with greater calorie burn.
+- Calories vs. Very Active Minutes: This graph demonstrates that increased time spent in vigorous physical activity correlates with a higher number of calories burned, reinforcing the value of intense exercise for caloric expenditure
+
