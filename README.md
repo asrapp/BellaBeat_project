@@ -422,22 +422,59 @@ FROM
   DailyActivity;
 ```
 
-Insights based on Correlation Analyses :
-At 0.71, there is a high positive correlation between calories and distance.
-At 0.64, there is a moderately high positive correlation between calories and distance.
-At 0.62, there is a moderately high positive correlation between calories and very active minutes.
-At 0.59, there is a moderately high positive correlation between calories and steps.
-At 0.30, there is a low positive correlation between calories and fairly active minutes.
-At 0.29, there is a negligible positive correlation between calories and lightly active minutes.
-At -0.11, there is a negligible negative correlation between calories and lightly active minutes.
+# Insights based on Correlation Analyses :
+
+- At 0.71, there is a high positive correlation between calories and distance.
+- At 0.64, there is a moderately high positive correlation between calories and distance.
+- At 0.62, there is a moderately high positive correlation between calories and very active minutes.
+- At 0.59, there is a moderately high positive correlation between calories and steps.
+- At 0.30, there is a low positive correlation between calories and fairly active minutes.
+- At 0.29, there is a negligible positive correlation between calories and lightly active minutes.
+- At -0.11, there is a negligible negative correlation between calories and lightly active minutes.
 
 
 Following visualization is made using Tableau Desktop to illustrate correlations:
 
+
 ![177237376-3abd0cf2-0a48-41c6-b7ac-b66a361d4b00](https://github.com/asrapp/BellaBeat_project/assets/96214105/c23f96e9-a082-44b9-915a-f83363935f8e)
+
+
 
 - Calories vs. Distance: This chart shows a clear positive correlation between calories burned and distance traveled. The trend suggests that as distance increases, so does calorie expenditure.
 - Calories vs. Steps: The plot displays a similar positive trend between the number of steps taken and calories burned, indicating that more steps typically lead to higher caloric burn.
 - Calories vs. METs: The relationship between METs and calories is strongly positive, highlighting that higher MET values, which indicate more intense activities, are associated with greater calorie burn.
 - Calories vs. Very Active Minutes: This graph demonstrates that increased time spent in vigorous physical activity correlates with a higher number of calories burned, reinforcing the value of intense exercise for caloric expenditure
 
+
+![177237874-04df95e2-d879-42c5-a75c-20efe87985aa](https://github.com/asrapp/BellaBeat_project/assets/96214105/276b2b34-f573-4a77-8120-b4a4f70b65b2)
+
+
+
+-Average Calories by Hour : On average, users burn most of their calories from 5PM-7PM.
+-Average Intensity by Hour : Users recorded their highest intensity levels from 5-7 PM.
+-Average Steps by Hour : Users walk the most by 5PM-7PM.
+
+
+![177237694-31a79c77-9f9c-4d02-ae73-e56b216d77f4](https://github.com/asrapp/BellaBeat_project/assets/96214105/a01d6e7a-ec63-4b2d-bed1-39d1b33a9723)
+
+
+- Calories Burned: Users burn the most calories on Tuesdays and the fewest on Thursdays.
+- METs: Tuesdays see the highest METs, while Thursdays have the lowest.
+- Very Active Minutes: Users are most active on Tuesdays and least active on Thursdays.
+- Steps Taken: The highest number of steps is recorded on Tuesdays, and the fewest on Fridays.
+
+# Recommendations
+- Update the Dataset: The current dataset is eight years old. To enhance relevance and accuracy, Bellabeat should consider updating the dataset with more participants and diverse demographic data, including gender, age, location, and physiological metrics like height and weight. This will enable a broader and more inclusive analysis.
+- Integrate Comprehensive Health Metrics: The addition of heart rate and weight logs could significantly enrich the dataset. Expanding the integration of these metrics within Bellabeat’s products can help users track their health more comprehensively. Enhancing the app to sync seamlessly with devices that monitor these metrics will provide users with a holistic view of their health.
+- Leverage Insights for Marketing and Product Enhancement:
+-- Caloric Burn Prediction: Utilize the positive correlation between calories burned and factors like steps, distance, METs, and very active minutes to develop --predictive analytics features. This tool could forecast caloric burn based on user activity patterns, encouraging users to stay active.
+-- Targeted Notifications: Implement notifications timed around peak activity periods, particularly from 5-7 PM, to encourage users to engage in moderate to intense physical activities. This aligns with the data showing when users are most active.
+- Optimize Sleep Health Features:
+-- Sleep Optimization Notifications: Since the data suggests an average 40-minute period to fall asleep, integrating sleep optimization tips and reminders could help users enhance sleep quality.
+-- Custom Sleep Goals: Allow users to set and adjust sleep duration goals based on personal data and trends observed in the app.
+- Sedentary Lifestyle Interventions:
+-- Activity Reminders: For users frequently in a sedentary state, automatic reminders to engage in light or moderate physical activity after prolonged periods of inactivity could be beneficial.
+-- Activity-Based Notifications: Since peak activity times are in the late afternoon and early evening, timed reminders or motivational messages could help maintain or increase user activity levels during these times.
+_ Incentivize Fitness Goals:
+-- Rewards System: Develop a rewards system that acknowledges user milestones with virtual badges or points that can be shared on social media. This could enhance user engagement and motivation.
+-- Social Challenges: Implement features that allow users to participate in fitness challenges with friends or the Bellabeat community, fostering a supportive and competitive environment.
