@@ -451,9 +451,9 @@ Following visualization is made using Tableau Desktop to illustrate correlations
 
 
 
--Average Calories by Hour : On average, users burn most of their calories from 5PM-7PM.
--Average Intensity by Hour : Users recorded their highest intensity levels from 5-7 PM.
--Average Steps by Hour : Users walk the most by 5PM-7PM.
+- Average Calories by Hour : On average, users burn most of their calories from 5PM-7PM.
+- Average Intensity by Hour : Users recorded their highest intensity levels from 5-7 PM.
+- Average Steps by Hour : Users walk the most by 5PM-7PM.
 
 
 ![177237874-04df95e2-d879-42c5-a75c-20efe87985aa](https://github.com/asrapp/BellaBeat_project/assets/96214105/276b2b34-f573-4a77-8120-b4a4f70b65b2)
